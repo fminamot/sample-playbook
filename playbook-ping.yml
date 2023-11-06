@@ -1,0 +1,10 @@
+- hosts: servers
+  tasks:
+
+  - name: ping
+    ansible.builtin.ping:
+    register: result
+
+  - name: debug
+    ansible.builtin.debug: 
+      msg: "{{ result }}"
